@@ -17,7 +17,7 @@
             <p class="text-xl mb-8">A fully typed SDK for building Trello Power-Ups with TypeScript</p>
             <div class="space-x-4">
                 <a href="#getting-started" class="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50 transition">Get Started</a>
-                <a href="https://github.com/yourusername/trello-powerup-typescript" class="border border-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-500 transition">GitHub</a>
+                <a href="https://github.com/Shaked-Aharon/trello-typescript-sdk" class="border border-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-500 transition">GitHub</a>
             </div>
         </div>
     </header>
@@ -48,10 +48,10 @@
             <h2 class="text-3xl font-bold mb-8">Getting Started</h2>
             <div class="bg-white p-8 rounded-lg shadow-sm">
                 <h3 class="text-xl font-semibold mb-4">Installation</h3>
-                <pre class="bg-gray-800 text-white p-4 rounded-lg mb-8"><code class="language-bash">npm install trello-powerup-typescript</code></pre>
+                <pre class="bg-gray-800 text-white p-4 rounded-lg mb-8"><code class="language-bash">npm install trello-powerup</code></pre>
 
                 <h3 class="text-xl font-semibold mb-4">Basic Usage</h3>
-                <pre class="bg-gray-800 text-white p-4 rounded-lg"><code class="language-typescript">import { TrelloPowerUpBuilder } from 'trello-powerup-typescript';
+                <pre class="bg-gray-800 text-white p-4 rounded-lg"><code class="language-typescript">import { TrelloPowerUpBuilder } from 'trello-powerup';
 
 const powerUp = new TrelloPowerUpBuilder({
   appKey: 'YOUR_APP_KEY',
@@ -80,7 +80,7 @@ const powerUp = new TrelloPowerUpBuilder({
             <h2 class="text-3xl font-bold mb-8">Using in Popups</h2>
             <div class="bg-white p-8 rounded-lg shadow-sm">
                 <pre class="bg-gray-800 text-white p-4 rounded-lg"><code class="language-typescript">// settings.html
-import { TrelloIFrame } from 'trello-powerup-typescript';
+import { TrelloIFrame } from 'trello-powerup';
 
 const iframe = new TrelloIFrame({
   appKey: 'YOUR_APP_KEY',
