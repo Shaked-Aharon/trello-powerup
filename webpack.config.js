@@ -51,7 +51,9 @@ module.exports = {
         // }),
         new CopyPlugin({
             patterns: [
-                { from: "assets", to: "assets", globOptions: { ignore: ['**/*.ts'] } }
+                { from: "assets", to: "assets", globOptions: { ignore: ['**/*.ts'] } },
+                { from: "public", to: "", globOptions: { ignore: ['**/*.ts'] } },
+                { from: "docs/index.bundle.js", to: "power-up", globOptions: { ignore: ['**/*.ts'] }  },
             ],
         }),
     ],
