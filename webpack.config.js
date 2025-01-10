@@ -5,8 +5,8 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
     entry: {
         index: './src/index.ts',
-        'card-fields': './src/card-fields.ts',
-        templates: './src/templates.ts'
+        // 'card-fields': './src/card-fields.ts',
+        // templates: './src/templates.ts'
     },
     module: {
         rules: [
@@ -34,24 +34,24 @@ module.exports = {
         clean: true
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: './src/index.html',
-            filename: 'index.html',
-            chunks: ['index']
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/card-fields.html',
-            filename: 'card-fields.html',
-            chunks: ['card-fields']
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/templates.html',
-            filename: 'templates.html',
-            chunks: ['templates']
-        }),
+        // new HtmlWebpackPlugin({
+        //     template: './src/index.html',
+        //     filename: 'index.html',
+        //     chunks: ['index']
+        // }),
+        // new HtmlWebpackPlugin({
+        //     template: './src/card-fields.html',
+        //     filename: 'card-fields.html',
+        //     chunks: ['card-fields']
+        // }),
+        // new HtmlWebpackPlugin({
+        //     template: './src/templates.html',
+        //     filename: 'templates.html',
+        //     chunks: ['templates']
+        // }),
         new CopyPlugin({
             patterns: [
-                { from: "assets", to: "assets", globOptions: { ignore: ['**/*.ts']} }
+                { from: "assets", to: "assets", globOptions: { ignore: ['**/*.ts'] } }
             ],
         }),
     ],
