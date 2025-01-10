@@ -18,17 +18,34 @@ async function startPowerUp() {
         color: 'blue'
       }];
     })
+    .onCardButtons(async (t) => {
+      return [
+        {
+          icon: 'https://shaked-aharon.github.io/trello-powerup/assets/icon.svg',
+          text: 'Set Priority',
+          callback: function (t) {
+            return t.popup({
+              title: 'Set Priority',
+              items: [
+                { text: 'Select', callback: () => ({ type: 'Lowest' }) },
+                { text: 'Highest', callback: () => ({ text: 'Highest' }) },
+              ],
+            });
+          }
+        }
+      ]
+    })
     .onBoardButtons(async (t) => {
       return [{
         text: 'Test Button',
-        icon: 'https://shaked-aharon.github.io/Card-Tag-Trello-PowerUp/favicon.ico'
+        icon: 'https://shaked-aharon.github.io/trello-powerup/assets/icon.svg'
       },] as BoardButton[];
     });
 
-  try{
+  try {
     await powerUp.initialize();
     console.log('successfuly initial power-up');
-  }catch(e: any){
+  } catch (e: any) {
     console.log('failed to initial power-up');
     console.log(e);
   }
